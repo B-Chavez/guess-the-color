@@ -31,14 +31,14 @@ function colorChange(){
             } else {
                 answerMessage.innerHTML = "Wrong answer! Guess again!"
             }
-        })
-        
+                })
+
         var red = getColorValue();
         var blue = getColorValue();
         var green = getColorValue();
-    
+
         setButtonColor(buttonsList[i], red, blue, green);
-    
+
         if(i === answerButton){
             colorNumber.innerHTML = `(${red}, ${green}, ${blue})`;
         }
