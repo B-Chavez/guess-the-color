@@ -26,7 +26,7 @@ function colorChange(){
 
     for(var i = 0; i < buttonsList.length; i++){
         buttonsList[i].addEventListener('click', function(){
-            if (this === buttons[answerButton]){
+            if (this === buttonsList[answerButton]){
                 answerMessage.innerHTML = "Correct!";
             } else {
                 answerMessage.innerHTML = "Wrong answer! Guess again!"
