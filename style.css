@@ -18,3 +18,7 @@ header{
     display: flex;
     justify-content: center;
 }
+
+#colorNumber{
+    text-align: center;
+}
