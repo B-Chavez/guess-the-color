@@ -1,6 +1,6 @@
 var colorNumber = document.querySelector("#colorNumber");
 
-colorChange()
+
 
 var resetButton = document.querySelector("#resetButton");
 resetButton.addEventListener('click', function(){
@@ -16,9 +16,23 @@ function getColorValue(){
 }
 
 function colorChange(){
+
+
     var buttonsList = document.querySelectorAll('.colors');
     var answerButton = Math.round(Math.random() * (buttonsList.length - 1))
+    var answerMessage = document.getElementById('answer')
+
+        answerMessage.innerHTML = "";
+
     for(var i = 0; i < buttonsList.length; i++){
+        buttonsList[i].addEventListener('click', function(){
+            if (this === buttons[answerButton]){
+                answerMessage.innerHTML = "Correct!";
+            } else {
+                answerMessage.innerHTML = "Wrong answer! Guess again!"
+            }
+        })
+        
         var red = getColorValue();
         var blue = getColorValue();
         var green = getColorValue();
@@ -30,3 +44,6 @@ function colorChange(){
         }
     }
 }
+
+
+colorChange()
